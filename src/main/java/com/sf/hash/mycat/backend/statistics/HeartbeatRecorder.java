@@ -1,7 +1,5 @@
 package com.sf.hash.mycat.backend.statistics;
 
-import cn.hotpu.hotdb.util.TimeUtil;
-
 import java.util.LinkedList;
 import java.util.List;
 
@@ -45,7 +43,7 @@ public class HeartbeatRecorder {
         if (value < 0) {
             return;
         }
-        long time = TimeUtil.currentTimeMillis();
+        long time = System.currentTimeMillis();
         remove(time);
         int size = records.size();
         if (size == 0) {
